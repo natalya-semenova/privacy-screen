@@ -14,7 +14,6 @@ public class PrivacyScreenPlugin: CAPPlugin {
     override public func load() {
         self.isEnabled = privacyScreenConfig().enable
         self.backgroundColor = privacyScreenConfig().backgroundColor
-        print("backgroundColor load", backgroundColor)
         NotificationCenter.default.addObserver(self, selector: #selector(self.onAppDidBecomeActive),
                                                name: UIApplication.didBecomeActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.onAppWillResignActive),
